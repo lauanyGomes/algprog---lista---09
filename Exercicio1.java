@@ -2,16 +2,20 @@ import java.util.Scanner;
 
 public class Exercicio1 {
 
-    public static void imprimir(int n) {
+    public static String imprimir(int n) {
+
+        String resultado = "";
 
         for (int i = 1; i <= n; i++) {
 
             for (int j = 1; j <= i; j++) {
-                System.out.print(i + " ");
+                resultado += i + " ";
             }
 
-            System.out.println();
+            resultado += "\n";
         }
+
+        return resultado;
     }
 
     public static void main(String[] args) {
@@ -21,8 +25,9 @@ public class Exercicio1 {
         System.out.println("Digite um número:");
         int n = entrada.nextInt();
 
-        imprimir(n);
+        System.out.println(imprimir(n));
 
         entrada.close();
     }
 }
+
